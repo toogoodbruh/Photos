@@ -1,5 +1,0 @@
-module Photos {
-	requires javafx.controls;
-	
-	opens app to javafx.graphics, javafx.fxml;
-}
