@@ -6,47 +6,58 @@ import javafx.scene.control.Alert;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 
 /**
- * This is a controller/class to keep data for all the users and make it transferable
+ * This is a controller/class to manage user data and handle errors.
  */
-public class UserListController implements Serializable{
+public class UserListController implements Serializable {
 
-    static String location = Paths.get("../Photos", "src", "userinfo", "Users.dat").toString();
+    private static final String DEFAULT_LOCATION = "Users.dat";
+    private static String location = DEFAULT_LOCATION;
 
     /**
-     * This method updates the list of users and all their attributes
-     * @param userArrayList
-     * @throws IOException
+     * Sets the location of the user data file.
+     *
+     * @param fileLocation The location of the user data file.
      */
-    public static void write(ArrayList<User> userArrayList) throws IOException{
-        try (ObjectOutputStream objectOutputStream = new ObjectOutputStream(Files.newOutputStream(Path.of(location)))){
+    public static void setLocation(String fileLocation) {
+        location = fileLocation;
+    }
+
+    /**
+     * Writes the list of users to a file.
+     *
+     * @param userArrayList The list of users to be written.
+     * @throws IOException If an I/O error occurs while writing to the file.
+     */
+    public static void write(ArrayList<User> userArrayList) throws IOException {
+        try (ObjectOutputStream objectOutputStream = new ObjectOutputStream(new FileOutputStream(location))) {
             objectOutputStream.writeObject(userArrayList);
         }
     }
 
     /**
-     * This method reads from the list of users to return and display their attributes
-     * @return
-     * @throws IOException
-     * @throws ClassNotFoundException
-     * @throws FileNotFoundException
+     * Reads the list of users from a file.
+     *
+     * @return The list of users read from the file.
+     * @throws IOException            If an I/O error occurs while reading from the file.
+     * @throws ClassNotFoundException If the class of a serialized object cannot be found.
      */
-    public static ArrayList<User> read() throws IOException, ClassNotFoundException, FileNotFoundException{
-        try (ObjectInputStream objectInputStream = new ObjectInputStream(new FileInputStream(location))){
+    public static ArrayList<User> read() throws IOException, ClassNotFoundException {
+        try (ObjectInputStream objectInputStream = new ObjectInputStream(new FileInputStream(location))) {
             return (ArrayList<User>) objectInputStream.readObject();
         }
     }
 
     /**
-     * This method is the error handler for the application
-     * @param title
-     * @param header
-     * @param context
+     * Displays an alert with the specified title, header, and content.
+     *
+     * @param title   The title of the alert.
+     * @param header  The header text of the alert.
+     * @param context The content text of the alert.
      */
-    public static void showAlert(String title, String header, String context){
+    public static void showAlert(String title, String header, String context) {
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle(title);
         alert.setHeaderText(header);

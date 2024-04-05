@@ -38,7 +38,7 @@ public class UserLoginController {
     @FXML
     public void onLoginPress(ActionEvent actionEvent) throws IOException, ClassNotFoundException {
         String username = userInputField.getText();
-        Path path = Paths.get("photos13","src","userinfo","Users.dat");
+        Path path = Paths.get("../Photos","src","userinfo","Users.dat");
         File f = new File(String.valueOf(path));
 
         if (username.equalsIgnoreCase("Admin")){
@@ -132,8 +132,10 @@ public class UserLoginController {
                 users = new ArrayList<>();
                 UserListController.write(users);
             }
-            users.add(stock);
-            UserListController.write(users);
+            if (findUser("stock") == null) {
+            	users.add(stock);
+                UserListController.write(users);
+            }
 
 
     }
