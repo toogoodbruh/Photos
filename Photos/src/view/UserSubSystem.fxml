@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="photos13.src.view.UserSubSystemController">
+    <children>
+        <VBox prefHeight="400.0" prefWidth="640.0">
+            <children>
+                <AnchorPane maxHeight="-1.0" maxWidth="-1.0" VBox.vgrow="ALWAYS">
+                    <children>
+                        <Button fx:id="Quit" layoutX="583.0" layoutY="14.0" mnemonicParsing="false" onAction="#quitHandler" prefHeight="26.0" prefWidth="46.0" text="QUIT" textAlignment="CENTER" />
+                        <Button fx:id="LogOutButton" layoutX="14.0" layoutY="8.0" mnemonicParsing="false" onAction="#logOutHandler" prefHeight="26.0" prefWidth="102.0" text="LOG OUT" textAlignment="CENTER" wrapText="true" />
+                        <Button fx:id="CreateAlbumButton" layoutX="470.0" layoutY="130.0" mnemonicParsing="false" onAction="#createAlbumHandler" prefHeight="52.0" prefWidth="90.0" text="CREATE" />
+                        <Button fx:id="RenameAlbumButton" layoutX="470.0" layoutY="200.0" mnemonicParsing="false" onAction="#renameAlbumHandler" prefHeight="52.0" prefWidth="90.0" text="RENAME" />
+                        <Button fx:id="OpenAlbumButton" layoutX="470.0" layoutY="270.0" mnemonicParsing="false" onAction="#openAlbumHandler" prefHeight="52.0" prefWidth="90.0" text="OPEN" />
+                        <Button fx:id="DeleteAlbumButton" layoutX="470.0" layoutY="340.0" mnemonicParsing="false" onAction="#deleteAlbumHandler" prefHeight="52.0" prefWidth="90.0" text="DELETE" />
+                        <TextField id="albumName" fx:id="albumName" layoutX="404.0" layoutY="90.0" prefHeight="26.0" prefWidth="227.0" promptText="Enter album name" />
+                        <ListView fx:id="albumsListView" layoutX="14.0" layoutY="35.0" prefHeight="366.0" prefWidth="382.0" />
+                    </children>
+                </AnchorPane>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

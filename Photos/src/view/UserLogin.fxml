@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="photos13.src.view.UserLoginController"
+            prefHeight="400.0" prefWidth="600.0"
+            maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity">
+    <children>
+        <Button fx:id="LoginButton" layoutX ="277.0" layoutY="220.0" mnemonicParsing="false" onAction="#onLoginPress" text="Login"/>
+        <Button fx:id="LoginQuitButton" layoutX="547.0" layoutY="14.0" mnemonicParsing="false" onAction="#OnActionQuit" text="Quit"/>
+        <TextField fx:id="userInputField" layoutX="226.0" layoutY="188.0" promptText="Username" />
+    </children>
+
+</AnchorPane>

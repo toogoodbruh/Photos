@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="photos13.src.view.SlideShowController"
+            >
+    <children>
+        <VBox prefHeight="400.0" prefWidth="640.0">
+            <children>
+                <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+                    <children>
+                        <Button fx:id="QuitButton" layoutX="574.0" layoutY="334.0" mnemonicParsing="false" onAction="#QuitHandler" prefHeight="52.0" prefWidth="52.0" text="QUIT" textAlignment="CENTER" />
+                        <Button fx:id="LogOutButton" layoutX="507.0" layoutY="334.0" mnemonicParsing="false" onAction="#LogOutHandler" prefHeight="52.0" prefWidth="52.0" text="LOG OUT" textAlignment="CENTER" wrapText="true" />
+                        <Button fx:id="BackButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#backHandler" text="Back" />
+                        <Button fx:id="PreviousPhotoButton" layoutX="405.0" layoutY="93.0" mnemonicParsing="false" onAction="#previousPhotoHandler" prefHeight="167.0" prefWidth="108.0" text="Previous" />
+                        <Button fx:id="NextPhotoButton" layoutX="518.0" layoutY="93.0" mnemonicParsing="false" onAction="#nextPhotoHandler" prefHeight="167.0" prefWidth="108.0" text="Next" />
+                        <ImageView fx:id="ImageView" fitHeight="330.0" fitWidth="375.0" layoutX="14.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true" />
+                    </children>
+                </AnchorPane>
+            </children>
+        </VBox>
+    </children>
+
+</AnchorPane>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="photos13.src.view.AlbumInterfaceController">
+    <children>
+        <VBox prefHeight="400.0" prefWidth="640.0">
+            <children>
+                <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+                    <children>
+                        <ListView fx:id="photoListView" layoutX="13.0" layoutY="48.0" prefHeight="285.0" prefWidth="614.0" />
+                        <MenuButton layoutX="568.0" layoutY="14.0" mnemonicParsing="false" text="Search">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#filterByDateHandler" text="Search by Date" />
+                                <MenuItem mnemonicParsing="false" onAction="#tagHandler" text="Search by Tag" />
+                                <MenuItem mnemonicParsing="false" onAction="#tagOrHandler" text="Search by Tag 1 or Tag 2" />
+                                <MenuItem mnemonicParsing="false" onAction="#tagAndHandler" text="Search by Tag 1 and Tag 2" />
+                                <MenuItem mnemonicParsing="false" onAction="#createFilteredAlbumHandler" text="Create Filtered Album" />
+                                <MenuItem fx:id="clearFilterButton" mnemonicParsing="false" onAction="#clearFilterHandler" text="Clear Filters" />
+                            </items>
+                        </MenuButton>
+                        <Button fx:id="BackButton" layoutX="13.0" layoutY="12.0" mnemonicParsing="false" onAction="#backToUserSettingsHandler" text="Back" />
+                        <Button fx:id="LogOutButton" layoutX="75.0" layoutY="10.0" mnemonicParsing="false" onAction="#LogOutHandler" prefHeight="30.0" prefWidth="75.0" text="Log Out" textAlignment="CENTER" wrapText="true" />
+                        <Button fx:id="QuitButton" layoutX="574.0" layoutY="344.0" mnemonicParsing="false" onAction="#QuitHandler" prefHeight="45.0" prefWidth="49.0" text="QUIT" textAlignment="CENTER" wrapText="true" />
+                        <Button fx:id="AddPhotoButton" layoutX="14.0" layoutY="338.0" mnemonicParsing="false" onAction="#AddPhotoHandler" prefHeight="25.0" prefWidth="85.0" text="Add Photo" />
+                        <Button fx:id="DeletePhotoButton" layoutX="14.0" layoutY="363.0" mnemonicParsing="false" onAction="#DeletePhotoHandler" text="Delete Photo" />
+                        <Button fx:id="AddTagButton" layoutX="132.0" layoutY="338.0" mnemonicParsing="false" onAction="#addTagHandler" prefHeight="25.0" prefWidth="85.0" text="Add Tag" />
+                        <Button fx:id="DeleteTagButton" layoutX="132.0" layoutY="363.0" mnemonicParsing="false" onAction="#deleteTagHandler" prefHeight="25.0" prefWidth="85.0" text="Delete Tag" />
+                        <Button fx:id="SlideshowButton" layoutX="468.0" layoutY="14.0" mnemonicParsing="false" onAction="#slideshowHandler" prefHeight="25.0" prefWidth="85.0" text="Slideshow" />
+                        <Button fx:id="DisplayButton" layoutX="295.0" layoutY="14.0" mnemonicParsing="false" onAction="#displayPhotoHandler" prefHeight="26.0" prefWidth="104.0" text="Display" />
+                        <Button fx:id="MoveFromAlbumButton" layoutX="367.0" layoutY="338.0" mnemonicParsing="false" onAction="#movePhotoHandler" prefHeight="25.0" prefWidth="114.0" text="Move to Album" />
+                        <Button fx:id="CopyFromAlbumButton" layoutX="367.0" layoutY="363.0" mnemonicParsing="false" onAction="#copyPhotoHandler" prefHeight="25.0" prefWidth="114.0" text="Copy to Album" />
+                        <Button fx:id="CaptionButton" layoutX="234.0" layoutY="339.0" mnemonicParsing="false" onAction="#captionHandler" prefHeight="25.0" prefWidth="121.0" text="Caption/ Recaption" wrapText="true" />
+                    </children>
+                </AnchorPane>
+            </children>
+        </VBox>
+    </children>
+
+</AnchorPane>

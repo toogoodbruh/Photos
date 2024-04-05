@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="photos13.src.view.AdminController"
+            prefHeight="400.0" prefWidth="600.0"
+            maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity">
+    <children>
+        <!-- Left side -->
+        <TextField fx:id="UserTextBox" layoutX="14.0" layoutY="155.0" promptText="Username" />
+        <Button fx:id="addNewUserButton" layoutX="69.0" layoutY="188.0" mnemonicParsing="false" onAction="#addNewUserHandler" text="Add" />
+
+        <!-- Right side -->
+        <ListView fx:id="userListView" layoutX="300.0" layoutY="20.0" prefHeight="319.0" prefWidth="290.0" />
+        <Button fx:id="deleteUserButton" layoutX="300.0" layoutY="350.0" mnemonicParsing="false" onAction="#deleteUserHandler" prefHeight="25.0" prefWidth="290.0" text="Delete" />
+
+        <!-- Log out/Quit -->
+        <Button fx:id="logOutButton" layoutX="15" layoutY="361.0" mnemonicParsing="false" onAction="#onLogOutPress" text="Log Out" />
+        <Button fx:id="quitButton" layoutX="15" layoutY="14.0" mnemonicParsing="false" onAction="#adminQuitHandler" text="Quit" />
+    </children>
+</AnchorPane>
+
