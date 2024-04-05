@@ -94,7 +94,7 @@ public class UserLoginController {
      * @throws ClassNotFoundException
      */
     public void loadStockPhotos() throws IOException, ClassNotFoundException{
-        Path path = Paths.get("photos13","src","userinfo","Users.dat");
+        Path path = Paths.get("photos","src","userinfo","Users.dat");
         File f = new File(String.valueOf(path));
         if (f.exists()) return;
 
@@ -104,15 +104,15 @@ public class UserLoginController {
             Photo p4 = new Photo();
             Photo p5 = new Photo();
 
-            Path path1 = Paths.get("photos13", "data", "bug.jpg");
+            Path path1 = Paths.get("../Photos", "data", "stock1.jpg");
             p1.setImage(path1.toString());
-            Path path2 = Paths.get("photos13","data", "deadlock.jpg");
+            Path path2 = Paths.get("../Photos","data", "stock2.png");
             p2.setImage(path2.toString());
-            Path path3 = Paths.get("photos13","data", "debugging.jpg");
+            Path path3 = Paths.get("../Photos","data", "stock3.png");
             p3.setImage(path3.toString());
-            Path path4 = Paths.get("photos13","data", "dogHW.png");
+            Path path4 = Paths.get("../Photos","data", "stock4.png");
             p4.setImage(path4.toString());
-            Path path5 = Paths.get("photos13","data", "testCases.png");
+            Path path5 = Paths.get("../Photos","data", "stock5.jpg");
             p5.setImage(path5.toString());
 
             Album stockAlbum = new Album("stock");

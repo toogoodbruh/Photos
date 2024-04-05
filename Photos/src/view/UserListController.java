@@ -14,7 +14,7 @@ import java.util.ArrayList;
  */
 public class UserListController implements Serializable{
 
-    static String location = Paths.get("photos13", "src", "userinfo", "Users.dat").toString();
+    static String location = Paths.get("../Photos", "src", "userinfo", "Users.dat").toString();
 
     /**
      * This method updates the list of users and all their attributes
